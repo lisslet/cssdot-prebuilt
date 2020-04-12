@@ -1,362 +1,233 @@
-.dot-nav {
-  font-size: 0;
-}
-.dot-nav li {
-  position: relative;
-}
-.dot-nav li ul {
-  display: none;
-  position: absolute;
-  z-index: 901;
-  min-width: 200px;
-  left: 0;
-}
-.dot-nav li:hover > ul {
-  display: block;
-}
+.dot-nav li,
 .dot-nav a {
   transition-duration: 0.3s;
   transition-property: background-color, color;
-  display: block;
-  white-space: nowrap;
 }
 .dot-nav li {
-  display: inline-block;
-  font-size: 1rem;
-  white-space: nowrap;
-}
-.dot-nav li ul li ul {
-  top: 0;
-  left: 100%;
-}
-.dot-nav li ul li {
-  display: block;
-}
-.dot-nav_scroll {
   position: relative;
 }
-.dot-nav_scroll > ul {
-  overflow: auto;
-  white-space: nowrap;
-  scroll-snap-type: x proximity;
-}
-.dot-nav_scroll li {
-  position: static;
-  scroll-snap-align: center;
-}
-.dot-nav_scroll li ul {
-  right: 0;
-  max-height: 50vh;
-  overflow-y: auto;
-}
-.dot-nav_scroll li ul ul {
-  overflow-y: visible;
-  height: auto;
-  position: static;
-  display: block;
-  top: 100%;
-  left: 0;
-  padding-left: 1.25em;
-  font-size: 0.875em;
-}
-@media only screen and (min-width: 1000px) {
-  .dot-nav_scroll {
-    position: inherit;
-  }
-  .dot-nav_scroll > ul {
-    overflow: visible;
-    white-space: inherit;
-    scroll-snap-type: none;
-  }
-  .dot-nav_scroll li {
-    position: relative;
-    scroll-snap-align: none;
-  }
-  .dot-nav_scroll li ul {
-    position: absolute;
-    right: inherit;
-    max-height: inherit;
-    overflow-y: visible;
-    display: none;
-  }
-  .dot-nav_scroll li ul ul {
-    overflow-y: inherit;
-    position: absolute;
-    display: none;
-    top: inherit;
-    left: inherit;
-    padding-left: inherit;
-    font-size: inherit;
-  }
-}
-
-.dot-nav-x {
-  font-size: 0;
-}
-.dot-nav-x li {
-  position: relative;
-}
-.dot-nav-x li ul {
-  display: none;
-  position: absolute;
-  z-index: 901;
-  min-width: 200px;
-  left: 0;
-}
-.dot-nav-x li:hover > ul {
-  display: block;
-}
-.dot-nav-x a {
-  transition-duration: 0.3s;
-  transition-property: background-color, color;
-  display: block;
-  white-space: nowrap;
-}
-.dot-nav-x li {
-  display: inline-block;
-  font-size: 1rem;
-  white-space: nowrap;
-}
-.dot-nav-x_scroll {
-  position: relative;
-}
-.dot-nav-x_scroll > ul {
-  overflow: auto;
-  white-space: nowrap;
-  scroll-snap-type: x proximity;
-}
-.dot-nav-x_scroll li {
-  position: static;
-  scroll-snap-align: center;
-}
-.dot-nav-x_scroll li ul {
-  right: 0;
-  max-height: 50vh;
-  overflow-y: auto;
-}
-.dot-nav-x_scroll li ul ul {
-  overflow-y: visible;
-  height: auto;
-  position: static;
-  display: block;
-  top: 100%;
-  left: 0;
-  padding-left: 1.25em;
-  font-size: 0.875em;
-}
-@media only screen and (min-width: 1000px) {
-  .dot-nav-x_scroll {
-    position: inherit;
-  }
-  .dot-nav-x_scroll > ul {
-    overflow: visible;
-    white-space: inherit;
-    scroll-snap-type: none;
-  }
-  .dot-nav-x_scroll li {
-    position: relative;
-    scroll-snap-align: none;
-  }
-  .dot-nav-x_scroll li ul {
-    position: absolute;
-    right: inherit;
-    max-height: inherit;
-    overflow-y: visible;
-    display: none;
-  }
-  .dot-nav-x_scroll li ul ul {
-    overflow-y: inherit;
-    position: absolute;
-    display: none;
-    top: inherit;
-    left: inherit;
-    padding-left: inherit;
-    font-size: inherit;
-  }
-}
-
-.dot-nav-y li {
-  position: relative;
-}
-.dot-nav-y li ul {
-  display: none;
-  position: absolute;
-  z-index: 901;
-  min-width: 200px;
-  top: 0;
-  left: 100%;
-}
-.dot-nav-y li:hover > ul {
-  display: block;
-}
-.dot-nav-y a {
-  transition-duration: 0.3s;
-  transition-property: background-color, color;
-  display: block;
-  white-space: nowrap;
-}
-.dot-nav-y li {
-  display: block;
-}
-.dot-nav-y_scroll {
-  position: relative;
-}
-.dot-nav-y_scroll > ul {
-  overflow: auto;
-  white-space: nowrap;
-  scroll-snap-type: x proximity;
-}
-.dot-nav-y_scroll li {
-  position: static;
-  scroll-snap-align: center;
-}
-.dot-nav-y_scroll li ul {
-  right: 0;
-  max-height: 50vh;
-  overflow-y: auto;
-}
-.dot-nav-y_scroll li ul ul {
-  overflow-y: visible;
-  height: auto;
-  position: static;
-  display: block;
-  top: 100%;
-  left: 0;
-  padding-left: 1.25em;
-  font-size: 0.875em;
-}
-@media only screen and (min-width: 1000px) {
-  .dot-nav-y_scroll {
-    position: inherit;
-  }
-  .dot-nav-y_scroll > ul {
-    overflow: visible;
-    white-space: inherit;
-    scroll-snap-type: none;
-  }
-  .dot-nav-y_scroll li {
-    position: relative;
-    scroll-snap-align: none;
-  }
-  .dot-nav-y_scroll li ul {
-    position: absolute;
-    right: inherit;
-    max-height: inherit;
-    overflow-y: visible;
-    display: none;
-  }
-  .dot-nav-y_scroll li ul ul {
-    overflow-y: inherit;
-    position: absolute;
-    display: none;
-    top: inherit;
-    left: inherit;
-    padding-left: inherit;
-    font-size: inherit;
-  }
-}
-
-.dot-nav-tree li {
-  position: relative;
-}
-.dot-nav-tree li ul {
+.dot-nav ul._fold {
   display: none;
 }
-.dot-nav-tree li:hover > ul {
+.dot-nav ul._unfold {
   display: block;
 }
-.dot-nav-tree a {
-  transition-duration: 0.3s;
-  transition-property: background-color, color;
-  display: block;
-  white-space: nowrap;
-}
-.dot-nav-tree_scroll {
-  position: relative;
-}
-.dot-nav-tree_scroll > ul {
-  overflow: auto;
-  white-space: nowrap;
-  scroll-snap-type: x proximity;
-}
-.dot-nav-tree_scroll li {
-  position: static;
-  scroll-snap-align: center;
-}
-.dot-nav-tree_scroll li ul {
-  right: 0;
-  max-height: 50vh;
-  overflow-y: auto;
-}
-.dot-nav-tree_scroll li ul ul {
-  overflow-y: visible;
-  height: auto;
-  position: static;
-  display: block;
-  top: 100%;
-  left: 0;
-  padding-left: 1.25em;
-  font-size: 0.875em;
-}
-@media only screen and (min-width: 1000px) {
-  .dot-nav-tree_scroll {
-    position: inherit;
-  }
-  .dot-nav-tree_scroll > ul {
-    overflow: visible;
-    white-space: inherit;
-    scroll-snap-type: none;
-  }
-  .dot-nav-tree_scroll li {
-    position: relative;
-    scroll-snap-align: none;
-  }
-  .dot-nav-tree_scroll li ul {
-    position: absolute;
-    right: inherit;
-    max-height: inherit;
-    overflow-y: visible;
-    display: none;
-  }
-  .dot-nav-tree_scroll li ul ul {
-    overflow-y: inherit;
-    position: absolute;
-    display: none;
-    top: inherit;
-    left: inherit;
-    padding-left: inherit;
-    font-size: inherit;
-  }
-}
-
-.dot-nav-horizontal_right li ul {
+.dot-nav._on-right._x > ul > li:last-child ul,
+.dot-nav._on-right._x > li:last-child ul, .dot-nav._on-right._xy > ul > li:last-child ul,
+.dot-nav._on-right._xy > li:last-child ul {
   left: inherit;
   right: 0;
 }
-.dot-nav-horizontal_right li:nth-last-child(2) > ul {
-  right: -6em;
+.dot-nav._on-right._xy > ul > li:last-child ul ul,
+.dot-nav._on-right._xy > li:last-child ul ul {
+  right: 100%;
 }
-.dot-nav-horizontal_right li:nth-last-child(3) > ul {
-  right: -9em;
+.dot-nav._on-right._xy > ul > li ul ul,
+.dot-nav._on-right._xy > li ul ul {
+  left: inherit;
+  right: 100%;
 }
-.dot-nav-horizontal_right li:nth-last-child(4) > ul {
-  right: -12em;
+.dot-nav._on-right._y > ul > li ul,
+.dot-nav._on-right._y > li ul {
+  left: inherit;
+  right: 100%;
 }
-.dot-nav-horizontal_right li:nth-last-child(5) > ul {
-  right: -15em;
+.dot-nav button {
+  float: right;
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
 }
-.dot-nav-horizontal_right li:nth-last-child(6) > ul {
-  right: -18em;
+.dot-nav button:focus {
+  outline: none;
 }
-.dot-nav-horizontal_right li:nth-last-child(7) > ul {
-  right: -21em;
+.dot-nav._xy {
+  font-size: 0;
 }
-.dot-nav-horizontal_right li:nth-last-child(8) > ul {
-  right: -24em;
+.dot-nav._xy li ul {
+  display: none;
+  position: absolute;
+  z-index: 901;
+  min-width: 100%;
+  left: 0;
 }
-.dot-nav-horizontal_right li:nth-last-child(9) > ul {
-  right: -27em;
+.dot-nav._xy li:hover > ul,
+.dot-nav._xy li a:hover + ul {
+  display: block;
 }
-.dot-nav-horizontal_right li:nth-last-child(10) > ul {
-  right: -30em;
+.dot-nav._xy a {
+  display: block;
+  white-space: nowrap;
+}
+.dot-nav._xy li {
+  display: inline-block;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.dot-nav._xy li ul li ul {
+  top: 0;
+  left: 100%;
+}
+.dot-nav._xy li ul li {
+  display: block;
+}
+.dot-nav._xy a {
+  padding: 0 0.626em;
+  height: 1.878em;
+  line-height: 1.878em;
+}
+.dot-nav._xy button {
+  height: 1.878em;
+  line-height: 1.878em;
+}
+.dot-nav._xy ul a {
+  padding: 0 0.626em;
+}
+.dot-nav._xy ul li {
+  background-color: #fff;
+}
+.dot-nav._x {
+  font-size: 0;
+}
+.dot-nav._x li ul {
+  display: none;
+  position: absolute;
+  z-index: 901;
+  min-width: 100%;
+  left: 0;
+}
+.dot-nav._x li:hover > ul,
+.dot-nav._x li a:hover + ul {
+  display: block;
+}
+.dot-nav._x a {
+  display: block;
+  white-space: nowrap;
+}
+.dot-nav._x li {
+  display: inline-block;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.dot-nav._x a {
+  padding: 0 0.626em;
+  height: 1.878em;
+  line-height: 1.878em;
+}
+.dot-nav._x button {
+  height: 1.878em;
+  line-height: 1.878em;
+}
+.dot-nav._y li {
+  display: block;
+}
+.dot-nav._y li ul {
+  display: none;
+  position: absolute;
+  z-index: 901;
+  top: 0;
+  left: 100%;
+}
+.dot-nav._y li:hover > ul,
+.dot-nav._y li a:hover + ul {
+  display: block;
+}
+.dot-nav._y a {
+  display: block;
+  white-space: nowrap;
+}
+.dot-nav._y li {
+  display: block;
+}
+.dot-nav._y a {
+  padding: 0 0.626em;
+  height: 1.878em;
+  line-height: 1.878em;
+}
+.dot-nav._y button {
+  height: 1.878em;
+  line-height: 1.878em;
+}
+.dot-nav._tree li {
+  display: block;
+}
+.dot-nav._tree a {
+  display: block;
+  white-space: nowrap;
+}
+.dot-nav._tree a {
+  padding: 0 0.626em;
+  height: 1.878em;
+  line-height: 1.878em;
+}
+.dot-nav._tree button {
+  height: 1.878em;
+  line-height: 1.878em;
+}
+.dot-nav._scroll {
+  position: relative;
+}
+.dot-nav._scroll > ul {
+  overflow: auto;
+  white-space: nowrap;
+  scroll-snap-type: x proximity;
+}
+.dot-nav._scroll li {
+  position: static;
+  scroll-snap-align: center;
+}
+.dot-nav._scroll li ul {
+  right: 0;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.dot-nav._scroll li ul ul {
+  overflow-y: visible;
+  height: auto;
+  position: static;
+  display: block;
+  top: 100%;
+  left: 0;
+  padding-left: 1.25em;
+  font-size: 0.875em;
+}
+@media only screen and (min-width: 1000px) {
+  .dot-nav._scroll {
+    position: inherit;
+  }
+  .dot-nav._scroll > ul {
+    overflow: visible;
+    white-space: inherit;
+    scroll-snap-type: none;
+  }
+  .dot-nav._scroll li {
+    position: relative;
+    scroll-snap-align: none;
+  }
+  .dot-nav._scroll li ul {
+    position: absolute;
+    right: inherit;
+    max-height: inherit;
+    overflow-y: visible;
+    display: none;
+  }
+  .dot-nav._scroll li ul ul {
+    overflow-y: inherit;
+    position: absolute;
+    display: none;
+    top: inherit;
+    left: inherit;
+    padding-left: inherit;
+    font-size: inherit;
+  }
+}
+.dot-nav._toggle-on-left button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.dot-nav._toggle-on-left a {
+  padding-left: 34px;
 }
