@@ -47,7 +47,9 @@ a {
   text-decoration: none;
 }
 
-address, em {
+address,
+em,
+time var {
   font: inherit;
 }
 
@@ -71,12 +73,14 @@ th {
   text-align: left;
 }
 
+a,
 input,
 select,
 textarea,
 button {
   font-size: inherit;
   font-family: inherit;
+  color: inherit;
 }
 
 button,
